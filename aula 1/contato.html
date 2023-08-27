@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Importações -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+</head>
+<body>
+    <!-- cabeçario -->
+    <header>
+        <img class="logo" src="./assets/1.png" alt="logo">
+        <nav>
+            <ul class="navigation">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <!-- conteudo -->
+    <main>
+        <section>
+            <article>
+                <h1>Formulario de Contato</h1>
+                <p>Preencha os dados abaixo e envie sua mensagem de contato.</p>
+
+                <fieldset>
+                    <legend>
+                        <h5>Dados de Contato</h5>
+                    </legend>
+                    <form id frmInscrico action="contato.php" method="POST">
+                        <label>Nome</label><br>
+                        <input type="text" required="required" id="textNone" maxlength="100" size="50" placeholder=" Nome Completo"><br><br>
+
+                        <!-- atividade campo de endereço -->
+
+                        <label>Estado</label>
+                        <select id="cbxEstado" required="required">
+                            <option value="">-Selecione-</option>
+                            <option value="1">SC</option>
+                            <option value="2">MG</option>
+                        </select><br><br>
+
+                        <!-- atividade 4 incluir um campo para a cidade similar ao do estado -->
+
+                        <label>Cidades</label>
+                        <select id="cbxCidade" required="required">
+                            <option value="">-Selecione-</option>
+                            <option value="1">Campo Grande</option>
+                            <option value="2">Nova Andradinha</option>
+                            <option value="3">Ponta Porã</option>
+                        </select><br><br>
+
+
+                        <label>E-mail:</label>
+                        <input type="email" required="required" size="50" id="txtEmail" placeholder="seuemail@email.com.br"><br><br>
+
+                        <!-- atividade 5 incluir um campo para o celular contendo palceholder -->
+
+                        
+                        <label>Telefone:</label>
+                        <input type="tel" required="required" size="50" id="txtEmail" placeholder="(00) 000000000"><br><br>
+  
+                        
+                        <!-- atividade 6: completar as oções de intesse -->
+
+                        <label>Areas de Interesse:</label><br>
+                        <input type="checkbox" value="JavaScript" name="chkAreasInteresse">
+                        <label>JavaScript</label>
+
+                        <input type="checkbox" value="HTML" name="chkAreasInteresse">
+                        <label>HTML</label>
+
+                        <input type="checkbox" value="CSS" name="chkAreasInteresse">
+                        <label>CSS</label><br><br>
+
+                        <!-- incluir campo de mensagem -->
+
+                        <label for="mensagem">Mensagem:</label><br><br>
+                        <textarea id="mensagem" name="mensagem" rows="7" cols="50" placeholder="Digite sua mensagem aqui..."></textarea>
+
+                        <!-- botão para enviar formilário -->
+                        
+                        <form action="processar_formulario.php" method="post">
+
+                            <button type="submit">Enviar</button>
+                          </form>
+
+                    </form>
+                </fieldset>
+            </article>
+        </section>
+    </main>
+
+    <!-- rodapé -->
+
+    <footer>
+        <ul class="btn">
+            <li><a href=""><i class="bi bi-instagram"></i></a></li>
+            <li><a href=""><i class="bi bi-twitter"></i></a></li>
+            <li><a href=""><i class="bi bi-facebook"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
